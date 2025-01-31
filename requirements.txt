@@ -1,4 +1,5 @@
 # List your dependencies here
 fastapi[all]
+pre-commit
 pytest
 setuptools
