@@ -1,6 +1,6 @@
-# Python Template Project
+# Python Project Template
 
-This is a template project for Python.
+This is a template for Python projects.
 
 ## Structure
 
@@ -9,23 +9,30 @@ This is a template project for Python.
 - `notebooks/`: Jupyter notebooks directory.
 - `.gitignore`: Git ignore file.
 - `.pre-commit-config.yaml`: Pre-commit hooks configuration.
-- `render.yaml`: FastAPI configuration.
-- `requirements.txt`: List of dependencies.
 - `LICENSE`: License for your project.
 - `README.md`: Project description and instructions.
+- `render.yaml`: FastAPI configuration.
+- `requirements.txt`: List of dependencies.
+- `setup.py`: Script for installing the package.
 
 ## Usage
 
+1. To setup and test the development enviroment:
 ```sh
+source .venv/bin/activate
+pre-commit install
 pip install -e .
+pytest
 ```
 
-To run the main script:
+2. To run the main script:
 ```sh
 python3 src/main.py
 ```
 
-To run the tests:
+3. To deploy the web app locally:
 ```sh
-pytest
+fastapi dev src/app.py
 ```
+
+4. To deploy the web app on Render: https://render.com/docs/deploy-fastapi
