@@ -9,7 +9,7 @@ This is a template for Python projects.
 - `notebooks/`: Jupyter notebooks directory.
 - `.gitignore`: Git ignore file.
 - `.pre-commit-config.yaml`: Pre-commit hooks configuration.
-- `LICENSE`: License for your project.
+- `LICENSE`: License for the project.
 - `README.md`: Project description and instructions.
 - `render.yaml`: Deployment configuration for Render.
 - `requirements.txt`: List of dependencies.
