@@ -11,7 +11,7 @@ This is a template for Python projects.
 - `.pre-commit-config.yaml`: Pre-commit hooks configuration.
 - `LICENSE`: License for your project.
 - `README.md`: Project description and instructions.
-- `render.yaml`: FastAPI configuration.
+- `render.yaml`: Deployment configuration for Render.
 - `requirements.txt`: List of dependencies.
 - `setup.py`: Script for installing the package.
 
@@ -19,9 +19,11 @@ This is a template for Python projects.
 
 1. To setup and test the development enviroment:
 ```sh
+python3 -m venv .venv
 source .venv/bin/activate
-pre-commit install
+pip install -r requirements.txt
 pip install -e .
+pre-commit install
 pytest
 ```
 
@@ -32,7 +34,7 @@ python3 src/main.py
 
 3. To deploy the web app locally:
 ```sh
-fastapi dev src/app.py
+fastapi dev src/main.py
 ```
 
-4. To deploy the web app on Render: https://render.com/docs/deploy-fastapi
+4. To deploy the web app on Render, see https://render.com/docs/deploy-fastapi
