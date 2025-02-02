@@ -4,9 +4,9 @@ This is a template for Python projects.
 
 ## Structure
 
+- `notebooks/`: Jupyter notebooks directory.
 - `src/`: Source directory.
 - `tests/`: Test directory.
-- `notebooks/`: Jupyter notebooks directory.
 - `.gitignore`: Git ignore file.
 - `.pre-commit-config.yaml`: Pre-commit hooks configuration.
 - `LICENSE`: License for the project.
