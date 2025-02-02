@@ -12,8 +12,7 @@ This is a template for Python projects.
 - `LICENSE`: License for the project.
 - `README.md`: Project description and instructions.
 - `render.yaml`: Deployment configuration for Render.
-- `requirements.txt`: List of dependencies.
-- `setup.py`: Script for installing the package.
+- `setup.py`: Script for installing the package and its depedencies.
 
 ## Usage
 
@@ -21,8 +20,7 @@ This is a template for Python projects.
 ```sh
 python3 -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
-pip install -e .
+pip install -e ".[dev]"
 pre-commit install
 pytest
 ```

@@ -1,6 +1,0 @@
-# List your dependencies here
-fastapi[all]
-ipykernel
-pre-commit
-pytest
-setuptools
