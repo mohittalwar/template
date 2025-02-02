@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from hello import Hello
+import utils
 
 
 app = FastAPI()
@@ -7,7 +7,7 @@ app = FastAPI()
 
 @app.get("/")
 async def root() -> dict[str, str]:
-    return {"message": Hello().get_message()}
+    return {"message": utils.get_message()}
 
 
 @app.get("/items/{item_id}")
@@ -16,4 +16,4 @@ def read_item(item_id: int, q: str | None) -> dict[str, int | str]:
 
 
 if __name__ == "__main__":
-    print(Hello().get_message())
+    print(utils.get_message())
