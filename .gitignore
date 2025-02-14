@@ -104,5 +104,8 @@ venv.bak/
 # mypy
 .mypy_cache/
 
+# ruff
+.ruff_cache/
+
 # Mac OS
 .DS_Store
