@@ -1,8 +1,10 @@
 from fastapi import FastAPI
+
+import config
 import utils
 
-
-app = FastAPI()
+settings = config.get_settings()
+app = FastAPI(title=settings.app_name, debug=settings.debug)
 
 
 @app.get("/")
@@ -11,8 +13,8 @@ async def root() -> dict[str, str]:
 
 
 @app.get("/items/{item_id}")
-def read_item(item_id: int, q: str | None) -> dict[str, int | str]:
-    return {"item_id": item_id, "q": f"{q}" if q else "None"}
+async def read_item(item_id: int, q: str | None = None) -> dict[str, int | str | None]:
+    return {"item_id": item_id, "q": q}
 
 
 if __name__ == "__main__":

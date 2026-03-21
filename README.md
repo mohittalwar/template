@@ -4,15 +4,15 @@ This is a template for Python projects.
 
 ## Structure
 
-- `notebooks/`: Jupyter notebooks directory.
-- `src/`: Source directory.
-- `tests/`: Test directory.
-- `.gitignore`: Git ignore file.
-- `.pre-commit-config.yaml`: Pre-commit hooks configuration.
-- `LICENSE`: License for the project.
-- `README.md`: Project description and instructions.
+- `src/main.py`: FastAPI app entry point with API routes.
+- `src/utils.py`: Shared helper functions.
+- `src/config.py`: App settings via pydantic-settings (reads env vars).
+- `tests/`: pytest tests for utilities and API endpoints.
+- `notebooks/`: Jupyter notebooks.
+- `.pre-commit-config.yaml`: Pre-commit hooks (ruff, mypy).
+- `pyproject.toml`: Package and dependency configuration.
 - `render.yaml`: Deployment configuration for Render.
-- `setup.py`: Script for installing the package and its depedencies.
+- `.env.example`: Documented environment variables.
 
 ## Usage
 

@@ -28,8 +28,10 @@ Run manually: `ruff check src/` and `mypy src/`
 
 This is a FastAPI web app with deployment configured for Render (`render.yaml`).
 
-- `src/main.py` — FastAPI app entry point; imports utilities from `src/utils.py`
+- `src/main.py` — FastAPI app entry point with route handlers; imports from `utils` and `config`
 - `src/utils.py` — Shared helper functions
-- `tests/` — pytest tests; modules import from `src/` directly (e.g., `import utils`)
+- `src/config.py` — App settings via pydantic-settings `BaseSettings` (reads env vars with defaults)
+- `tests/` — pytest tests; `test_utils.py` for unit tests, `test_main.py` for API endpoint tests
 - `notebooks/` — Jupyter notebooks
-- Source packages are configured via `setup.py` with `src/` as the package root
+- `pyproject.toml` — Package config, dependencies, and tooling settings
+- `.env.example` — Documented environment variables
