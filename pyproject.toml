@@ -20,9 +20,25 @@ dev = [
     "mypy",
     "pre-commit",
     "pytest",
+    "pytest-cov",
     "ruff",
 ]
 
 [tool.setuptools]
 package-dir = {"" = "src"}
 py-modules = ["main", "utils", "config"]
+
+[tool.mypy]
+python_version = "3.10"
+disallow_untyped_defs = true   # all functions must have type annotations
+warn_return_any = true         # warn when a function returns Any
+warn_unused_ignores = true     # warn when a `# type: ignore` comment is unnecessary
+warn_redundant_casts = true    # warn when a cast() call has no effect
+strict_equality = true         # disallow non-overlapping equality checks (e.g. str == int)
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+disallow_untyped_defs = false
+
+[tool.pytest.ini_options]
+addopts = "--cov=src --cov-report=term-missing --cov-fail-under=100"

@@ -17,5 +17,5 @@ async def read_item(item_id: int, q: str | None = None) -> dict[str, int | str |
     return {"item_id": item_id, "q": q}
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     print(utils.get_message())
