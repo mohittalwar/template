@@ -16,13 +16,13 @@ Run FastAPI dev server: `fastapi dev src/main.py`
 
 ## Testing
 
-Run all tests: `pytest`
-Run a single test: `pytest tests/test_utils.py::test_get_message`
+Run all tests: `pytest` (includes coverage report; fails if coverage drops below 100%)
+Run a single test: `pytest tests/test_utils.py::test_get_message --no-cov`
 
 ## Linting
 
-Pre-commit hooks run ruff (linting) and mypy (type checking) automatically on commit.
-Run manually: `ruff check src/` and `mypy src/`
+Pre-commit hooks run ruff (linting), ruff-format (formatting), and mypy (type checking) automatically on commit.
+Run manually: `ruff check src/`, `ruff format src/`, and `mypy src/`
 
 ## Architecture
 
